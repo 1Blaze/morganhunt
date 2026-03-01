@@ -1,0 +1,157 @@
+:root {
+  --bg: #00112e;
+  --accent: #f58220;
+  --text: #ffffff;
+}
+
+$bg: #00112e;
+$accent: #f58220;
+$white: #ffffff;
+
+body {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: $bg;
+  color: $white;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    // justify-content: flex-start;
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 680px;
+  width: 100%;
+  animation: fadeUp 1s ease both;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: $accent;
+  margin: 1.5rem auto;
+  border-radius: 2px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+
+.websiteSoon {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.5rem 1.4rem;
+  border-radius: 2px;
+  margin-bottom: 3rem;
+  animation: fadeUp 1s ease 0.6s both;
+}
+
+.contactSection {
+  animation: fadeUp 1s ease 0.7s both;
+}
+
+.contactIntro {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1rem;
+}
+
+.phoneNumber {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: color 0.25s;
+}
+
+.phoneNumber::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  margin: 0.3rem auto 0;
+  border-radius: 2px;
+}
+
+.phoneNumber:hover {
+  color: var(--accent);
+}
+.phoneNumber:hover::after {
+  width: 100%;
+}
+
+.website-url {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.03em;
+}
+
+.website-url strong {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 3.5rem;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.08em;
+  animation: fadeUp 1s ease 0.9s both;
+  align-self: flex-end;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  animation: fadeUp 1s ease 0.35s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
